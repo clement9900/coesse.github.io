@@ -7,9 +7,8 @@
 
   <style>
     :root {
-      --bg: #f5f5f7;              /* Apple light background */
-      --card-bg: rgba(255,255,255,0.72);
-      --border: rgba(0,0,0,0.08);
+      --bg-main: #ffffff;
+      --bg-soft: #f5f5f7;
       --fg: #1d1d1f;
       --muted: #6e6e73;
       --accent: #0071e3;
@@ -23,9 +22,9 @@
 
     body {
       font-family: -apple-system, BlinkMacSystemFont,
-        "SF Pro Text", "SF Pro Display",
+        "SF Pro Display", "SF Pro Text",
         "Helvetica Neue", Helvetica, Arial, sans-serif;
-      background: linear-gradient(180deg, #f5f5f7 0%, #ffffff 100%);
+      background: var(--bg-main);
       color: var(--fg);
       line-height: 1.6;
       -webkit-font-smoothing: antialiased;
@@ -40,44 +39,39 @@
       text-decoration: underline;
     }
 
-    .page {
-      max-width: 1040px;
+    .section {
+      padding: 96px 24px;
+    }
+
+    .section.soft {
+      background: var(--bg-soft);
+    }
+
+    .container {
+      max-width: 980px;
       margin: 0 auto;
-      padding: 40px 20px 60px;
-      display: grid;
-      gap: 28px;
     }
 
-    .card {
-      background: var(--card-bg);
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
-      border-radius: 18px;
-      padding: 40px 36px;
-      border: 1px solid var(--border);
-    }
-
-    /* Typography */
     h1 {
-      font-size: clamp(2.8rem, 5vw, 4.2rem);
+      font-size: clamp(3rem, 5vw, 4.8rem);
       font-weight: 600;
       letter-spacing: -0.035em;
-      margin-bottom: 12px;
+      margin-bottom: 20px;
     }
 
     .tagline {
-      font-size: 1.25rem;
+      font-size: 1.3rem;
       color: var(--muted);
     }
 
     p {
       max-width: 720px;
-      font-size: 1.05rem;
-      margin-bottom: 18px;
+      font-size: 1.1rem;
+      margin-bottom: 22px;
     }
 
     .lead {
-      font-size: 1.2rem;
+      font-size: 1.3rem;
       font-weight: 500;
     }
 
@@ -86,15 +80,13 @@
     }
 
     footer p {
-      margin-bottom: 10px;
       font-size: 0.9rem;
+      margin-bottom: 8px;
     }
 
-    /* Mobile tuning */
-    @media (max-width: 600px) {
-      .card {
-        padding: 32px 22px;
-        border-radius: 16px;
+    @media (max-width: 640px) {
+      .section {
+        padding: 64px 22px;
       }
     }
   </style>
@@ -102,23 +94,24 @@
 
 <body>
 
-  <div class="page">
-
-    <!-- Hero -->
-    <section class="card">
+  <!-- Hero -->
+  <section class="section">
+    <div class="container">
       <h1>Coesse</h1>
       <div class="tagline">One World. One Breath.</div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Core Statement -->
-    <section class="card">
+  <!-- Core -->
+  <section class="section soft">
+    <div class="container">
       <p class="lead">
         Coesse is a non-profit initiative
         spontaneously formed by anonymous volunteers.
       </p>
 
       <p>
-        We focus on the dignity of life and the connection
+        We focus on the dignity of life and the relationship
         between individual action, Earth protection,
         and the defense of human rights.
       </p>
@@ -127,12 +120,14 @@
         We believe the Earth is an interconnected living system.
         Respect for nature, respect for others,
         and respect for life itself
-        are essential to a sustainable human civilization.
+        is essential to the future of human civilization.
       </p>
-    </section>
+    </div>
+  </section>
 
-    <!-- Independence -->
-    <section class="card">
+  <!-- Independence -->
+  <section class="section">
+    <div class="container">
       <p class="lead">
         Coesse is not affiliated with any institution,
         government, or official organization.
@@ -141,42 +136,47 @@
       <p class="muted">
         We do not represent political positions,
         seek authority, or pursue control.
-        Our purpose is simply to encourage
-        individual responsibility and conscious action.
+        We exist only to encourage individual responsibility
+        and conscious action.
       </p>
 
       <p>
         Change does not begin with grand structures.
         It begins with each individual.
       </p>
-    </section>
+    </div>
+  </section>
 
-    <!-- Closing -->
-    <section class="card">
+  <!-- Closing -->
+  <section class="section soft">
+    <div class="container">
       <p class="lead">
         Human rights and Earth protection
         are two expressions of the same responsibility.
       </p>
-    </section>
+    </div>
+  </section>
 
-    <!-- Footer -->
-    <footer class="card">
-      <p>
-        Contact:
-        <a href="mailto:oneworld@coesse.org">oneworld@coesse.org</a>
-      </p>
-      <p>
-        Instagram:
-        <a href="https://www.instagram.com/coesse.organization" target="_blank">
-          @coesse.organization
-        </a>
-      </p>
-      <p class="muted">
-        © 2026 Coesse.org. All rights reserved.
-      </p>
-    </footer>
-
-  </div>
+  <!-- Footer -->
+  <section class="section">
+    <div class="container">
+      <footer>
+        <p>
+          Contact:
+          <a href="mailto:oneworld@coesse.org">oneworld@coesse.org</a>
+        </p>
+        <p>
+          Instagram:
+          <a href="https://www.instagram.com/coesse.organization" target="_blank">
+            @coesse.organization
+          </a>
+        </p>
+        <p class="muted">
+          © 2026 Coesse.org. All rights reserved.
+        </p>
+      </footer>
+    </div>
+  </section>
 
 </body>
 </html>
