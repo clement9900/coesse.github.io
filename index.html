@@ -1,242 +1,208 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Coesse · One World. One Breath.</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Coesse · One World. One Breath.</title>
 
-  <style>
-    :root {
-      --white: #ffffff;
-      --white-soft: rgba(255,255,255,0.88);
-      --white-muted: rgba(255,255,255,0.72);
-      --text-main: #1d1d1f;
-      --text-muted: rgba(0,0,0,0.55);
-      --bg-light: #f5f5f7;
-      --accent: #0071e3;
-    }
+<style>
+:root {
+  --black: #000;
+  --white: #fff;
+  --text-main: #1d1d1f;
+  --text-muted: #6e6e73;
+  --bg-light: #ffffff;
+  --accent: #0071e3;
+}
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-    body {
-      font-family: -apple-system, BlinkMacSystemFont,
-        "SF Pro Display", "SF Pro Text",
-        "Helvetica Neue", Arial, sans-serif;
-      background: #ffffff;
-      color: var(--text-main);
-      line-height: 1.65;
-      -webkit-font-smoothing: antialiased;
-    }
+body {
+  font-family: -apple-system, BlinkMacSystemFont,
+    "SF Pro Display","SF Pro Text","Helvetica Neue",Arial,sans-serif;
+  color: var(--text-main);
+  background: var(--bg-light);
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
 
-    a {
-      color: var(--accent);
-      text-decoration: none;
-    }
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
 
-    a:hover {
-      text-decoration: underline;
-    }
+a:hover {
+  text-decoration: underline;
+}
 
-    /* ================= HERO ================= */
+/* ===== HERO ===== */
 
-    .hero {
-      min-height: 100vh;
-      background:
-        linear-gradient(
-          to bottom,
-          rgba(0,0,0,0.35),
-          rgba(0,0,0,0.65)
-        ),
-        url("bg.jpg");
-      background-size: cover;
-      background-position: center;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 0 24px;
-    }
+.hero {
+  min-height: 100vh;
+  background:
+    radial-gradient(
+      circle at center,
+      rgba(0,0,0,0.35),
+      rgba(0,0,0,0.75)
+    ),
+    url("bg.jpg") center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 24px;
+}
 
-    .hero-content {
-      max-width: 900px;
-      animation: fadeUp 1.2s ease-out both;
-    }
+.hero-content {
+  max-width: 860px;
+  animation: fadeUp 1.1s ease-out both;
+}
 
-    @keyframes fadeUp {
-      from {
-        opacity: 0;
-        transform: translateY(16px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(14px); }
+  to { opacity: 1; transform: translateY(0); }
+}
 
-    .hero h1 {
-      font-size: clamp(3.6rem, 6vw, 6rem);
-      font-weight: 600;
-      letter-spacing: -0.04em;
-      color: var(--white);
-      margin-bottom: 28px;
-    }
+.hero h1 {
+  font-size: clamp(3.8rem, 6vw, 6.2rem);
+  font-weight: 600;
+  letter-spacing: -0.04em;
+  color: var(--white);
+  margin-bottom: 26px;
+}
 
-    .hero p {
-      font-size: 1.4rem;
-      font-weight: 400;
-      color: var(--white-soft);
-      margin-bottom: 10px;
-    }
+.hero p {
+  font-size: 1.45rem;
+  font-weight: 400;
+  color: var(--white);
+  margin-bottom: 8px;
+}
 
-    .hero .tagline {
-      margin-top: 26px;
-      font-size: 1.45rem;
-      font-weight: 500;
-      letter-spacing: -0.01em;
-      color: var(--white);
-    }
+.hero .tagline {
+  margin-top: 28px;
+  font-size: 1.5rem;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  color: var(--white);
+}
 
-    /* ================= SECTIONS ================= */
+/* ===== CONTENT ===== */
 
-    .section {
-      padding: 104px 24px;
-    }
+.section {
+  padding: 110px 24px;
+}
 
-    .section.light {
-      background: var(--bg-light);
-    }
+.container {
+  max-width: 980px;
+  margin: 0 auto;
+}
 
-    .container {
-      max-width: 980px;
-      margin: 0 auto;
-    }
+.lead {
+  font-size: 1.55rem;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  margin-bottom: 36px;
+}
 
-    .lead {
-      font-size: 1.5rem;
-      font-weight: 500;
-      letter-spacing: -0.01em;
-      margin-bottom: 36px;
-    }
+.text {
+  font-size: 1.12rem;
+  max-width: 760px;
+  margin-bottom: 26px;
+}
 
-    .text {
-      font-size: 1.1rem;
-      max-width: 760px;
-      margin-bottom: 26px;
-    }
+.muted {
+  color: var(--text-muted);
+}
 
-    .muted {
-      color: var(--text-muted);
-    }
+/* ===== FOOTER ===== */
 
-    /* ================= FOOTER ================= */
+footer {
+  padding: 64px 24px 56px;
+  text-align: center;
+  font-size: 0.9rem;
+}
 
-    footer {
-      padding: 64px 24px 56px;
-      text-align: center;
-      font-size: 0.9rem;
-    }
+footer p {
+  margin-bottom: 10px;
+}
 
-    footer p {
-      margin-bottom: 10px;
-    }
-
-    @media (max-width: 640px) {
-      .section {
-        padding: 72px 22px;
-      }
-      .hero p {
-        font-size: 1.18rem;
-      }
-      .hero .tagline {
-        font-size: 1.25rem;
-      }
-    }
-  </style>
+@media (max-width: 640px) {
+  .section { padding: 72px 22px; }
+  .hero p { font-size: 1.2rem; }
+  .hero .tagline { font-size: 1.3rem; }
+}
+</style>
 </head>
 
 <body>
 
-  <!-- HERO -->
-  <section class="hero">
-    <div class="hero-content">
-      <h1>Coesse</h1>
-      <p>Protecting the Earth.</p>
-      <p>Defending human dignity.</p>
-      <div class="tagline">One World. One Breath.</div>
+<section class="hero">
+  <div class="hero-content">
+    <h1>Coesse</h1>
+    <p>Protecting the Earth.</p>
+    <p>Defending human dignity.</p>
+    <div class="tagline">One World. One Breath.</div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="lead">
+      Coesse is a non-profit initiative formed by anonymous volunteers.
     </div>
-  </section>
-
-  <!-- ABOUT -->
-  <section class="section light">
-    <div class="container">
-      <div class="lead">
-        Coesse is a non-profit initiative formed by anonymous volunteers.
-      </div>
-
-      <div class="text">
-        We focus on the dignity of life and the shared responsibility between
-        protecting the Earth and defending human rights.
-      </div>
-
-      <div class="text">
-        We believe the Earth is an interconnected living system.
-        Respect for nature, respect for others,
-        and respect for life itself
-        is the foundation of a sustainable civilization.
-      </div>
+    <div class="text">
+      We focus on the dignity of life and the shared responsibility between
+      protecting the Earth and defending human rights.
     </div>
-  </section>
-
-  <!-- POSITION -->
-  <section class="section">
-    <div class="container">
-      <div class="lead">
-        Independent. Non-political. Volunteer-driven.
-      </div>
-
-      <div class="text muted">
-        Coesse is not affiliated with any institution,
-        government, or official organization.
-        We do not seek authority or control.
-      </div>
-
-      <div class="text">
-        Change does not begin with grand systems.
-        It begins with individuals.
-      </div>
+    <div class="text">
+      We believe the Earth is an interconnected living system.
+      Respect for nature, respect for others,
+      and respect for life itself
+      is the foundation of a sustainable civilization.
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- REFLECTION -->
-  <section class="section light">
-    <div class="container">
-      <div class="lead">
-        Human rights and Earth protection are two expressions
-        of the same responsibility.
-      </div>
+<section class="section">
+  <div class="container">
+    <div class="lead">
+      Independent. Non-political. Volunteer-driven.
     </div>
-  </section>
+    <div class="text muted">
+      Coesse is not affiliated with any institution,
+      government, or official organization.
+      We do not seek authority or control.
+    </div>
+    <div class="text">
+      Change does not begin with grand systems.
+      It begins with individuals.
+    </div>
+  </div>
+</section>
 
-  <!-- FOOTER -->
-  <footer>
-    <p>
-      Contact:
-      <a href="mailto:oneworld@coesse.org">oneworld@coesse.org</a>
-    </p>
-    <p>
-      Instagram:
-      <a href="https://www.instagram.com/coesse.organization" target="_blank">
-        @coesse.organization
-      </a>
-    </p>
-    <p class="muted">
-      © 2026 Coesse.org. All rights reserved.
-    </p>
-  </footer>
+<section class="section">
+  <div class="container">
+    <div class="lead">
+      Human rights and Earth protection
+      are two expressions of the same responsibility.
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>Contact: <a href="mailto:oneworld@coesse.org">oneworld@coesse.org</a></p>
+  <p>
+    Instagram:
+    <a href="https://www.instagram.com/coesse.organization" target="_blank">
+      @coesse.organization
+    </a>
+  </p>
+  <p class="muted">© 2026 Coesse.org. All rights reserved.</p>
+</footer>
 
 </body>
 </html>
