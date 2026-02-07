@@ -7,13 +7,12 @@
 
   <style>
     :root {
-      /* Bright, daylight palette */
-      --bg: #ffffff;
-      --fg: #0f172a;       /* deep graphite */
-      --text: #1f2937;     /* primary text */
-      --muted: #6b7280;    /* secondary text */
-      --accent: #1f7a7a;   /* clear earth-teal */
-      --divider: rgba(15, 23, 42, 0.08);
+      --bg: #f5f5f7;              /* Apple light background */
+      --card-bg: rgba(255,255,255,0.72);
+      --border: rgba(0,0,0,0.08);
+      --fg: #1d1d1f;
+      --muted: #6e6e73;
+      --accent: #0071e3;
     }
 
     * {
@@ -24,159 +23,160 @@
 
     body {
       font-family: -apple-system, BlinkMacSystemFont,
-        "SF Pro Text", "Helvetica Neue", Helvetica, Arial, sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.7;
+        "SF Pro Text", "SF Pro Display",
+        "Helvetica Neue", Helvetica, Arial, sans-serif;
+      background: linear-gradient(180deg, #f5f5f7 0%, #ffffff 100%);
+      color: var(--fg);
+      line-height: 1.6;
       -webkit-font-smoothing: antialiased;
-      text-rendering: optimizeLegibility;
     }
 
     a {
-      color: var(--fg);
+      color: var(--accent);
       text-decoration: none;
-      border-bottom: 1px solid rgba(15,23,42,0.25);
     }
 
     a:hover {
-      border-bottom-color: var(--accent);
+      text-decoration: underline;
     }
 
-    header {
+    .page {
       max-width: 1040px;
       margin: 0 auto;
-      padding: 56px 24px 32px;
+      padding: 40px 20px 60px;
+      display: grid;
+      gap: 28px;
     }
 
-    header h1 {
-      font-size: clamp(3rem, 5vw, 4.6rem);
+    .card {
+      background: var(--card-bg);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-radius: 18px;
+      padding: 40px 36px;
+      border: 1px solid var(--border);
+    }
+
+    /* Typography */
+    h1 {
+      font-size: clamp(2.8rem, 5vw, 4.2rem);
       font-weight: 600;
-      letter-spacing: -0.03em;
-      color: var(--fg);
-      margin-bottom: 10px;
+      letter-spacing: -0.035em;
+      margin-bottom: 12px;
     }
 
-    header .tagline {
+    .tagline {
       font-size: 1.25rem;
-      color: var(--accent);
-    }
-
-    main {
-      max-width: 1040px;
-      margin: 0 auto;
-      padding: 32px 24px 56px;
+      color: var(--muted);
     }
 
     p {
-      max-width: 860px;
-      font-size: 1.08rem;
-      margin-bottom: 22px;
-      color: var(--text);
+      max-width: 720px;
+      font-size: 1.05rem;
+      margin-bottom: 18px;
     }
 
     .lead {
-      font-size: 1.18rem;
+      font-size: 1.2rem;
       font-weight: 500;
-      color: var(--fg);
     }
 
     .muted {
       color: var(--muted);
     }
 
-    .divider {
-      width: 100%;
-      max-width: 860px;
-      height: 1px;
-      background: var(--divider);
-      margin: 40px 0;
-    }
-
-    footer {
-      max-width: 1040px;
-      margin: 0 auto;
-      padding: 28px 24px 36px;
-      font-size: 0.9rem;
-      color: var(--muted);
-    }
-
     footer p {
-      margin-bottom: 8px;
+      margin-bottom: 10px;
+      font-size: 0.9rem;
+    }
+
+    /* Mobile tuning */
+    @media (max-width: 600px) {
+      .card {
+        padding: 32px 22px;
+        border-radius: 16px;
+      }
     }
   </style>
 </head>
 
 <body>
 
-  <header>
-    <h1>Coesse</h1>
-    <div class="tagline">One World. One Breath.</div>
-  </header>
+  <div class="page">
 
-  <main>
-    <p class="lead">
-      Coesse is a non-profit initiative
-      spontaneously formed by anonymous volunteers.
-    </p>
+    <!-- Hero -->
+    <section class="card">
+      <h1>Coesse</h1>
+      <div class="tagline">One World. One Breath.</div>
+    </section>
 
-    <p>
-      We focus on the dignity of life
-      and the relationship between individual action,
-      Earth protection,
-      and the defense of human rights.
-    </p>
+    <!-- Core Statement -->
+    <section class="card">
+      <p class="lead">
+        Coesse is a non-profit initiative
+        spontaneously formed by anonymous volunteers.
+      </p>
 
-    <p>
-      We believe the Earth is an interconnected living system.
-      Respect for nature, respect for others,
-      and respect for life itself
-      are the foundations of a sustainable human civilization.
-    </p>
+      <p>
+        We focus on the dignity of life and the connection
+        between individual action, Earth protection,
+        and the defense of human rights.
+      </p>
 
-    <div class="divider"></div>
+      <p>
+        We believe the Earth is an interconnected living system.
+        Respect for nature, respect for others,
+        and respect for life itself
+        are essential to a sustainable human civilization.
+      </p>
+    </section>
 
-    <p class="lead">
-      Coesse is not affiliated with any institution,
-      government, or official organization.
-    </p>
+    <!-- Independence -->
+    <section class="card">
+      <p class="lead">
+        Coesse is not affiliated with any institution,
+        government, or official organization.
+      </p>
 
-    <p class="muted">
-      We do not represent political positions,
-      seek authority, or pursue control.
-      Our purpose is simple:
-      to awaken individual responsibility and goodwill.
-    </p>
+      <p class="muted">
+        We do not represent political positions,
+        seek authority, or pursue control.
+        Our purpose is simply to encourage
+        individual responsibility and conscious action.
+      </p>
 
-    <p>
-      Change does not begin with grand structures.
-      It begins with each individual.
-    </p>
+      <p>
+        Change does not begin with grand structures.
+        It begins with each individual.
+      </p>
+    </section>
 
-    <div class="divider"></div>
+    <!-- Closing -->
+    <section class="card">
+      <p class="lead">
+        Human rights and Earth protection
+        are two expressions of the same responsibility.
+      </p>
+    </section>
 
-    <p class="lead">
-      Human rights and Earth protection
-      are two expressions of the same responsibility.
-    </p>
-  </main>
+    <!-- Footer -->
+    <footer class="card">
+      <p>
+        Contact:
+        <a href="mailto:oneworld@coesse.org">oneworld@coesse.org</a>
+      </p>
+      <p>
+        Instagram:
+        <a href="https://www.instagram.com/coesse.organization" target="_blank">
+          @coesse.organization
+        </a>
+      </p>
+      <p class="muted">
+        © 2026 Coesse.org. All rights reserved.
+      </p>
+    </footer>
 
-  <footer>
-    <p>
-      Contact:
-      <a href="mailto:oneworld@coesse.org">oneworld@coesse.org</a>
-    </p>
-
-    <p>
-      Instagram:
-      <a href="https://www.instagram.com/coesse.organization" target="_blank">
-        @coesse.organization
-      </a>
-    </p>
-
-    <p>
-      © 2026 Coesse.org. All rights reserved.
-    </p>
-  </footer>
+  </div>
 
 </body>
 </html>
