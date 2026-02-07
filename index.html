@@ -2,134 +2,146 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Coesse · One World. One Breath</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Coesse — One World. One Breath.</title>
 
-  <meta name="description"
-        content="Coesse is a volunteer-initiated, non-profit initiative focused on the dignity of life, protecting the Earth and defending human rights.">
+  <style>
+    :root {
+      --bg: #000;
+      --fg: #f5f5f7;
+      --muted: #a1a1a6;
+      --accent: #ffffff;
+    }
 
-  <link rel="stylesheet" href="css/style.css">
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display",
+        "Helvetica Neue", Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--fg);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    section {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 120px 24px;
+    }
+
+    h1 {
+      font-size: clamp(2.8rem, 5vw, 4.5rem);
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      margin-bottom: 32px;
+    }
+
+    h2 {
+      font-size: 1.4rem;
+      font-weight: 500;
+      margin-bottom: 12px;
+    }
+
+    p {
+      font-size: 1.05rem;
+      color: var(--muted);
+      max-width: 720px;
+    }
+
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .tagline {
+      font-size: 1.2rem;
+      margin-top: 16px;
+      color: var(--muted);
+    }
+
+    .divider {
+      height: 1px;
+      background: rgba(255,255,255,0.1);
+      margin: 80px 0;
+    }
+
+    footer {
+      text-align: center;
+      padding: 80px 24px;
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+
+    a {
+      color: var(--fg);
+      text-decoration: none;
+      border-bottom: 1px solid rgba(255,255,255,0.3);
+    }
+
+    a:hover {
+      border-bottom-color: var(--fg);
+    }
+  </style>
 </head>
+
 <body>
 
-<!-- HERO -->
-<header class="hero">
-  <img src="images/earth.jpg" alt="Earth from space">
-  <div class="hero-text">
-    <h1>One World.<br>One Breath.</h1>
-    <p class="tagline">Protect the Earth · Defend the Dignity of Life</p>
-  </div>
-</header>
+  <section class="hero">
+    <h1>Coesse</h1>
+    <p class="tagline">One World. One Breath.</p>
 
-<main class="container">
+    <div class="divider"></div>
 
-  <!-- INTRO -->
-  <section class="intro">
-    <p class="lead">
-      <strong>Coesse</strong> is a volunteer-initiated, non-profit initiative.
-      It is not affiliated with any institution or government.
+    <p>
+      Coesse is a volunteer-run, non-profit initiative founded by anonymous
+      individuals. We believe that the protection of the Earth and the defense
+      of human dignity begin with individual awareness and everyday action.
     </p>
   </section>
 
-  <!-- MISSION -->
   <section>
     <h2>Mission</h2>
     <p>
-      To mobilize individuals worldwide to protect the Earth and defend the
-      dignity of life, ensuring a sustainable and just future for present and
-      future generations.
+      To mobilize global volunteers to protect the planet, defend human rights,
+      and cultivate a culture of coexistence for present and future generations.
     </p>
-  </section>
 
-  <!-- VISION -->
-  <section>
+    <div class="divider"></div>
+
     <h2>Vision</h2>
     <p>
       A world where humanity and nature coexist in harmony, every life is
-      respected, and individual responsibility shapes a sustainable civilization.
+      respected, and individuals across cultures and borders unite to shape a
+      sustainable and just future.
     </p>
-  </section>
 
-  <!-- VALUES -->
-  <section>
-    <h2>Core Values</h2>
+    <div class="divider"></div>
 
-    <div class="values">
-
-      <div class="value">
-        <h3>Coexistence</h3>
-        <p>
-          The Earth is a living, interconnected system. All life is connected and
-          deserves protection.
-        </p>
-      </div>
-
-      <div class="value">
-        <h3>Human Dignity</h3>
-        <p>
-          Every person possesses inherent rights, value, and the freedom to live
-          with safety and respect.
-        </p>
-      </div>
-
-      <div class="value">
-        <h3>Earth Responsibility</h3>
-        <p>
-          As part of the planet, we share responsibility for protecting this
-          world—for humanity and for all life.
-        </p>
-      </div>
-
-      <div class="value">
-        <h3>Collective Action</h3>
-        <p>
-          True change begins with individuals. When people unite across cultures
-          and borders, the world can change.
-        </p>
-      </div>
-
-      <div class="value">
-        <h3>Integrity & Transparency</h3>
-        <p>
-          We act with integrity, responsibility, and transparency to earn public
-          trust.
-        </p>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- CONTACT -->
-  <section class="contact">
-    <h2>Connect</h2>
+    <h2>Core Belief</h2>
     <p>
-      If our values resonate with you, we welcome you to stay connected.
+      We see the Earth as a living system. All forms of life are interconnected,
+      worthy of protection, and deserving of fundamental rights.
     </p>
-
-    <p class="email">oneworld@coesse.org</p>
-
-    <a class="button"
-       href="https://www.instagram.com/coesse.organization"
-       target="_blank">
-      Instagram
-    </a>
   </section>
 
-</main>
-
-<!-- FOOTER -->
-<footer>
-  <p>
-    © Coesse · One World. One Breath<br>
-    A volunteer-initiated, non-profit initiative.<br>
-    Not affiliated with any institution or government.
-  </p>
-
-  <p class="disclaimer">
-    This website is for informational and advocacy purposes only and does not
-    constitute legal, financial, or professional advice.
-  </p>
-</footer>
+  <footer>
+    <p>
+      Contact: <a href="mailto:oneworld@coesse.org">oneworld@coesse.org</a>
+    </p>
+    <p style="margin-top:12px;">
+      Instagram:
+      <a href="https://www.instagram.com/coesse.organization" target="_blank">
+        @coesse.organization
+      </a>
+    </p>
+  </footer>
 
 </body>
 </html>
