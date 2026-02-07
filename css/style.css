@@ -5,110 +5,128 @@
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  background: #ffffff;
-  color: #000000;
-  line-height: 1.7;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+               Roboto, Helvetica, Arial, sans-serif;
+  color: #1d1d1f;
+  line-height: 1.75;
 }
 
-/* HERO */
-.hero {
-  position: relative;
-  height: 100vh;
-  overflow: hidden;
+/* Background */
+.background {
+  position: fixed;
+  inset: 0;
+  background: url("bg.jpg") center / cover no-repeat;
+  z-index: -2;
 }
 
-.hero img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.hero-text {
+.background::after {
+  content: "";
   position: absolute;
-  bottom: 18%;
-  left: 10%;
-  color: #ffffff;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(4px);
 }
 
-.hero-text h1 {
-  font-size: 3.2rem;
-  font-weight: 600;
-}
-
-.tagline {
-  margin-top: 1rem;
-  font-size: 1.2rem;
-  opacity: 0.9;
-}
-
-/* LAYOUT */
+/* Layout */
 .container {
-  max-width: 960px;
+  max-width: 1100px;
   margin: 0 auto;
-  padding: 5rem 2rem;
+  padding: 80px 20px 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 44px;
 }
 
-section {
-  margin-bottom: 5rem;
+/* Glass */
+.glass {
+  background: rgba(255, 255, 255, 0.78);
+  backdrop-filter: blur(18px);
+  border-radius: 20px;
+  padding: 36px;
+  box-shadow: 0 24px 48px rgba(0,0,0,0.08);
 }
 
-h2 {
-  font-size: 2rem;
-  margin-bottom: 1.5rem;
+/* Hero */
+.hero {
+  text-align: center;
+  padding: 68px 48px;
 }
 
-.lead {
-  font-size: 1.3rem;
-  color: #333;
+.hero h1 {
+  font-size: 3rem;
+  font-weight: 600;
+  margin-bottom: 18px;
 }
 
-/* VALUES */
-.values {
+.subtitle {
+  font-size: 1.15rem;
+  color: #2c2c2e;
+  max-width: 760px;
+  margin: 0 auto 22px;
+}
+
+.note {
+  font-size: 0.95rem;
+  color: #6e6e73;
+}
+
+/* Sections */
+.section h2 {
+  font-size: 1.6rem;
+  margin-bottom: 16px;
+}
+
+.section p {
+  margin-bottom: 14px;
+  color: #2c2c2e;
+}
+
+.reflection p {
+  font-size: 1.05rem;
+}
+
+/* Emphasis */
+.emphasis {
+  font-weight: 500;
+  margin-top: 20px;
+}
+
+/* Beliefs */
+.beliefs {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 2rem;
+  gap: 28px;
 }
 
-.value h3 {
+.card h3 {
   font-size: 1.2rem;
-  margin-bottom: 0.5rem;
+  margin-bottom: 10px;
 }
 
-/* CONTACT */
-.contact {
-  text-align: center;
+/* Contact */
+.contact-info {
+  font-weight: 500;
+  margin-top: 14px;
 }
 
-.email {
-  font-size: 1.2rem;
-  margin: 1.5rem 0;
-}
-
-.button {
-  display: inline-block;
-  padding: 0.8rem 2.2rem;
-  border: 1px solid #000;
-  text-decoration: none;
-  color: #000;
-  transition: all 0.2s ease;
-}
-
-.button:hover {
-  background: #000;
-  color: #fff;
-}
-
-/* FOOTER */
+/* Footer */
 footer {
-  padding: 3rem 2rem;
   text-align: center;
   font-size: 0.85rem;
-  color: #666;
+  color: #6e6e73;
+  margin-top: 10px;
 }
 
-.disclaimer {
-  margin-top: 1rem;
-  font-size: 0.8rem;
-  color: #888;
+footer p {
+  margin-bottom: 6px;
+}
+
+@media (max-width: 600px) {
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+
+  .glass {
+    padding: 28px;
+  }
 }
