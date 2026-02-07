@@ -7,10 +7,11 @@
 
   <style>
     :root {
-      --bg: #f5f7f4;
-      --fg: #1d1d1f;
+      --bg: #f4f6f3;
+      --fg: #161617;        /* darker, clearer */
+      --secondary: #3a3a3c; /* readable gray */
       --muted: #6e6e73;
-      --divider: rgba(0,0,0,0.08);
+      --divider: rgba(0,0,0,0.12);
     }
 
     * {
@@ -22,102 +23,108 @@
     body {
       font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display",
         "Helvetica Neue", Helvetica, Arial, sans-serif;
-      background: linear-gradient(180deg, #f5f7f4 0%, #eef1ee 100%);
+      background: linear-gradient(180deg, #f4f6f3 0%, #edf0ed 100%);
       color: var(--fg);
-      line-height: 1.75;
+      line-height: 1.65;
       -webkit-font-smoothing: antialiased;
     }
 
     section {
-      max-width: 960px;
+      max-width: 1040px;
       margin: 0 auto;
-      padding: 120px 24px;
+      padding: 96px 28px;
     }
 
     h1 {
-      font-size: clamp(2.8rem, 5vw, 4.4rem);
+      font-size: clamp(3rem, 5vw, 4.6rem);
       font-weight: 600;
-      letter-spacing: -0.02em;
-      margin-bottom: 24px;
-    }
-
-    h3 {
-      font-size: 1.2rem;
-      font-weight: 600;
-      margin-bottom: 16px;
-    }
-
-    p {
-      font-size: 1.05rem;
-      color: var(--muted);
-      max-width: 760px;
+      letter-spacing: -0.025em;
       margin-bottom: 20px;
     }
 
+    .tagline {
+      font-size: 1.2rem;
+      color: var(--secondary);
+      margin-bottom: 56px;
+    }
+
+    p {
+      font-size: 1.08rem;
+      max-width: 820px;
+      margin-bottom: 22px;
+      color: var(--secondary);
+    }
+
+    /* anchor paragraph */
+    .core {
+      color: var(--fg);
+      font-size: 1.12rem;
+    }
+
     .hero {
-      min-height: 100vh;
+      min-height: 92vh;
       display: flex;
       flex-direction: column;
       justify-content: center;
     }
 
-    .tagline {
-      font-size: 1.15rem;
-      color: var(--muted);
-      margin-bottom: 64px;
-    }
-
     .divider {
       height: 1px;
       background: var(--divider);
-      margin: 72px 0;
+      margin: 56px 0;
+      max-width: 820px;
     }
 
-    footer {
-      max-width: 960px;
-      margin: 0 auto;
-      padding: 80px 24px;
+    .nav {
+      position: fixed;
+      top: 22px;
+      left: 24px;
       font-size: 0.9rem;
-      color: var(--muted);
-      text-align: center;
     }
 
     a {
       color: var(--fg);
       text-decoration: none;
-      border-bottom: 1px solid rgba(0,0,0,0.25);
+      border-bottom: 1px solid rgba(0,0,0,0.3);
     }
 
     a:hover {
       border-bottom-color: var(--fg);
     }
 
-    .nav {
-      position: fixed;
-      top: 24px;
-      left: 24px;
+    footer {
+      max-width: 1040px;
+      margin: 0 auto;
+      padding: 64px 28px;
       font-size: 0.9rem;
+      color: var(--muted);
+      text-align: center;
     }
   </style>
 </head>
 
 <body>
 
-  <!-- Simple Navigation -->
   <div class="nav">
     <a href="about.html">Reflection</a>
   </div>
 
-  <!-- MAIN -->
   <section class="hero">
     <h1>Coesse</h1>
     <div class="tagline">One World. One Breath.</div>
 
-    <p>
+    <p class="core">
       Coesse is a non-profit initiative spontaneously formed
       by anonymous volunteers.
-      We focus on the dignity of life and connect individual actions
-      to protect the Earth and defend human rights.
+      It exists to reconnect individual responsibility
+      with the dignity of life.
+    </p>
+
+    <p>
+      We focus on the protection of the Earth
+      and the defense of human rights,
+      not as separate causes,
+      but as a shared responsibility.
     </p>
 
     <p>
@@ -129,12 +136,16 @@
 
     <div class="divider"></div>
 
+    <p class="core">
+      Coesse is not affiliated with any institution,
+      government, or official organization.
+    </p>
+
     <p>
-      Coesse is not affiliated with any institution, government,
-      or official organization.
       We represent no political position,
       seek no authority or control,
-      and aim only to awaken individual responsibility and goodwill.
+      and aim only to awaken individual responsibility
+      and goodwill.
     </p>
 
     <p>
@@ -144,33 +155,18 @@
 
     <div class="divider"></div>
 
-    <p>
+    <p class="core">
       Human rights and Earth protection
       are two expressions of the same responsibility.
     </p>
   </section>
 
-  <!-- LEGAL -->
   <section>
-    <h3>Legal Notice</h3>
-
-    <p>
-      Coesse is an independent, volunteer-initiated, non-profit initiative.
-      It is not a registered organization, legal entity,
-      NGO, or corporation.
-    </p>
-
-    <p>
-      All content on this website is provided for informational
-      and expressive purposes only.
-    </p>
-
     <p>
       © 2026 Coesse.org. All rights reserved.
     </p>
   </section>
 
-  <!-- FOOTER -->
   <footer>
     <p>
       Contact:
