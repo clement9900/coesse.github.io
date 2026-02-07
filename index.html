@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Coesse — One World. One Breath.</title>
+  <title>Coesse · One World. One Breath.</title>
 
   <style>
     :root {
-      --bg: #000;
-      --fg: #f5f5f7;
-      --muted: #a1a1a6;
-      --accent: #ffffff;
+      --bg: #f5f7f4;
+      --fg: #1d1d1f;
+      --muted: #6e6e73;
+      --divider: rgba(0,0,0,0.08);
     }
 
     * {
@@ -22,9 +22,9 @@
     body {
       font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display",
         "Helvetica Neue", Helvetica, Arial, sans-serif;
-      background: var(--bg);
+      background: linear-gradient(180deg, #f5f7f4 0%, #eef1ee 100%);
       color: var(--fg);
-      line-height: 1.6;
+      line-height: 1.75;
       -webkit-font-smoothing: antialiased;
     }
 
@@ -35,22 +35,23 @@
     }
 
     h1 {
-      font-size: clamp(2.8rem, 5vw, 4.5rem);
+      font-size: clamp(2.8rem, 5vw, 4.4rem);
       font-weight: 600;
       letter-spacing: -0.02em;
-      margin-bottom: 32px;
+      margin-bottom: 24px;
     }
 
-    h2 {
-      font-size: 1.4rem;
-      font-weight: 500;
-      margin-bottom: 12px;
+    h3 {
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin-bottom: 16px;
     }
 
     p {
       font-size: 1.05rem;
       color: var(--muted);
-      max-width: 720px;
+      max-width: 760px;
+      margin-bottom: 20px;
     }
 
     .hero {
@@ -61,79 +62,119 @@
     }
 
     .tagline {
-      font-size: 1.2rem;
-      margin-top: 16px;
+      font-size: 1.15rem;
       color: var(--muted);
+      margin-bottom: 64px;
     }
 
     .divider {
       height: 1px;
-      background: rgba(255,255,255,0.1);
-      margin: 80px 0;
+      background: var(--divider);
+      margin: 72px 0;
     }
 
     footer {
-      text-align: center;
+      max-width: 960px;
+      margin: 0 auto;
       padding: 80px 24px;
       font-size: 0.9rem;
       color: var(--muted);
+      text-align: center;
     }
 
     a {
       color: var(--fg);
       text-decoration: none;
-      border-bottom: 1px solid rgba(255,255,255,0.3);
+      border-bottom: 1px solid rgba(0,0,0,0.25);
     }
 
     a:hover {
       border-bottom-color: var(--fg);
+    }
+
+    .nav {
+      position: fixed;
+      top: 24px;
+      left: 24px;
+      font-size: 0.9rem;
     }
   </style>
 </head>
 
 <body>
 
+  <!-- Simple Navigation -->
+  <div class="nav">
+    <a href="about.html">Reflection</a>
+  </div>
+
+  <!-- MAIN -->
   <section class="hero">
     <h1>Coesse</h1>
-    <p class="tagline">One World. One Breath.</p>
+    <div class="tagline">One World. One Breath.</div>
+
+    <p>
+      Coesse is a non-profit initiative spontaneously formed
+      by anonymous volunteers.
+      We focus on the dignity of life and connect individual actions
+      to protect the Earth and defend human rights.
+    </p>
+
+    <p>
+      We believe the Earth is an interconnected living system.
+      Respect for nature, respect for others,
+      and respect for life
+      are the foundations of a sustainable human civilization.
+    </p>
 
     <div class="divider"></div>
 
     <p>
-      Coesse is a volunteer-run, non-profit initiative founded by anonymous
-      individuals. We believe that the protection of the Earth and the defense
-      of human dignity begin with individual awareness and everyday action.
+      Coesse is not affiliated with any institution, government,
+      or official organization.
+      We represent no political position,
+      seek no authority or control,
+      and aim only to awaken individual responsibility and goodwill.
+    </p>
+
+    <p>
+      Change does not begin with grand structures,
+      but with each individual.
+    </p>
+
+    <div class="divider"></div>
+
+    <p>
+      Human rights and Earth protection
+      are two expressions of the same responsibility.
     </p>
   </section>
 
+  <!-- LEGAL -->
   <section>
-    <h2>Mission</h2>
+    <h3>Legal Notice</h3>
+
     <p>
-      To mobilize global volunteers to protect the planet, defend human rights,
-      and cultivate a culture of coexistence for present and future generations.
+      Coesse is an independent, volunteer-initiated, non-profit initiative.
+      It is not a registered organization, legal entity,
+      NGO, or corporation.
     </p>
 
-    <div class="divider"></div>
-
-    <h2>Vision</h2>
     <p>
-      A world where humanity and nature coexist in harmony, every life is
-      respected, and individuals across cultures and borders unite to shape a
-      sustainable and just future.
+      All content on this website is provided for informational
+      and expressive purposes only.
     </p>
 
-    <div class="divider"></div>
-
-    <h2>Core Belief</h2>
     <p>
-      We see the Earth as a living system. All forms of life are interconnected,
-      worthy of protection, and deserving of fundamental rights.
+      © 2026 Coesse.org. All rights reserved.
     </p>
   </section>
 
+  <!-- FOOTER -->
   <footer>
     <p>
-      Contact: <a href="mailto:oneworld@coesse.org">oneworld@coesse.org</a>
+      Contact:
+      <a href="mailto:oneworld@coesse.org">oneworld@coesse.org</a>
     </p>
     <p style="margin-top:12px;">
       Instagram:
