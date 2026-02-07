@@ -8,10 +8,11 @@
   <style>
     :root {
       --white: #ffffff;
-      --soft-white: rgba(255,255,255,0.85);
-      --muted-dark: rgba(0,0,0,0.55);
-      --light-bg: #f5f5f7;
+      --white-soft: rgba(255,255,255,0.88);
+      --white-muted: rgba(255,255,255,0.72);
       --text-main: #1d1d1f;
+      --text-muted: rgba(0,0,0,0.55);
+      --bg-light: #f5f5f7;
       --accent: #0071e3;
     }
 
@@ -47,10 +48,10 @@
       background:
         linear-gradient(
           to bottom,
-          rgba(0,0,0,0.55),
+          rgba(0,0,0,0.35),
           rgba(0,0,0,0.65)
         ),
-        url("https://images.unsplash.com/photo-1444703686981-a3abbc4d4fe3?auto=format&fit=crop&w=2400&q=80");
+        url("bg.jpg");
       background-size: cover;
       background-position: center;
       display: flex;
@@ -62,20 +63,32 @@
 
     .hero-content {
       max-width: 900px;
+      animation: fadeUp 1.2s ease-out both;
+    }
+
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(16px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     .hero h1 {
-      font-size: clamp(3.4rem, 6vw, 5.8rem);
+      font-size: clamp(3.6rem, 6vw, 6rem);
       font-weight: 600;
-      letter-spacing: -0.035em;
+      letter-spacing: -0.04em;
       color: var(--white);
       margin-bottom: 28px;
     }
 
     .hero p {
-      font-size: 1.35rem;
+      font-size: 1.4rem;
       font-weight: 400;
-      color: var(--soft-white);
+      color: var(--white-soft);
       margin-bottom: 10px;
     }
 
@@ -83,17 +96,18 @@
       margin-top: 26px;
       font-size: 1.45rem;
       font-weight: 500;
+      letter-spacing: -0.01em;
       color: var(--white);
     }
 
     /* ================= SECTIONS ================= */
 
     .section {
-      padding: 96px 24px;
+      padding: 104px 24px;
     }
 
     .section.light {
-      background: var(--light-bg);
+      background: var(--bg-light);
     }
 
     .container {
@@ -102,31 +116,32 @@
     }
 
     .lead {
-      font-size: 1.45rem;
+      font-size: 1.5rem;
       font-weight: 500;
-      margin-bottom: 32px;
+      letter-spacing: -0.01em;
+      margin-bottom: 36px;
     }
 
     .text {
-      font-size: 1.08rem;
+      font-size: 1.1rem;
       max-width: 760px;
-      margin-bottom: 24px;
+      margin-bottom: 26px;
     }
 
     .muted {
-      color: var(--muted-dark);
+      color: var(--text-muted);
     }
 
     /* ================= FOOTER ================= */
 
     footer {
-      padding: 72px 24px 64px;
+      padding: 64px 24px 56px;
       text-align: center;
       font-size: 0.9rem;
     }
 
     footer p {
-      margin-bottom: 12px;
+      margin-bottom: 10px;
     }
 
     @media (max-width: 640px) {
@@ -134,7 +149,10 @@
         padding: 72px 22px;
       }
       .hero p {
-        font-size: 1.15rem;
+        font-size: 1.18rem;
+      }
+      .hero .tagline {
+        font-size: 1.25rem;
       }
     }
   </style>
