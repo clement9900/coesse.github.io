@@ -24,7 +24,7 @@
         body {
             background-color: var(--bg-dark);
             color: var(--text-main);
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
             line-height: 1.6;
             -webkit-font-smoothing: antialiased;
         }
@@ -212,10 +212,15 @@
             margin-bottom: 10px;
         }
 
-        .initiator {
+        .contact-link {
             color: var(--accent-cyan);
             text-decoration: none;
-            font-weight: 600;
+            opacity: 0.8;
+            transition: opacity 0.2s;
+        }
+
+        .contact-link:hover {
+            opacity: 1;
         }
 
         /* Mobile Adjustments */
@@ -244,7 +249,7 @@
             <p>
                 Coesse is a civilization collaboration consensus network. We believe that when countless individuals connect and act, the world regains the power to shift its own direction.
             </p>
-            <a href="mailto:coesselife@proton.me" class="cta-btn">JOIN THE NETWORK</a>
+            <a href="mailto:oneworld@coesse.org" class="cta-btn">JOIN THE NETWORK</a>
         </section>
 
         <section id="mission">
@@ -301,10 +306,9 @@
         </section>
 
         <footer>
-            <div class="footer-info">Initiated by <a href="#" class="initiator">Clement Sihe Jiang</a></div>
             <div class="footer-info">© 2026 Coesse. Civilization Collaboration Consensus Network.</div>
-            <div class="footer-info" style="margin-top: 20px; font-size: 12px; opacity: 0.5;">
-                coesselife@proton.me
+            <div class="footer-info" style="margin-top: 20px;">
+                <a href="mailto:oneworld@coesse.org" class="contact-link">oneworld@coesse.org</a>
             </div>
         </footer>
     </div>
