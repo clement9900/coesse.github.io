@@ -1,222 +1,120 @@
-Coesse Official Portal — Next.js Architecture (Phase 5)
+<!DOCTYPE html><html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Coesse — Civilization Consensus Network</title><style>
+*{margin:0;padding:0;box-sizing:border-box}
 
-This is the full production‑grade structure for the Coesse official website using Next.js App Router with a cinematic animated hero section.
-
-
----
-
-📁 Project Structure
-
-coesse-site/
- ├── app/
- │   ├── layout.tsx
- │   ├── page.tsx
- │   ├── manifesto/page.tsx
- │   ├── governance/page.tsx
- │   ├── token/page.tsx
- │   ├── community/page.tsx
- │
- ├── components/
- │   ├── Navbar.tsx
- │   ├── Hero.tsx
- │   ├── Section.tsx
- │
- ├── styles/
- │   └── globals.css
- │
- ├── package.json
- └── next.config.js
-
-
----
-
-🚀 Install
-
-npx create-next-app@latest coesse-site
-cd coesse-site
-npm install
-
-Replace files with the following.
-
-
----
-
-🌐 app/layout.tsx
-
-import "../styles/globals.css";
-import Navbar from "@/components/Navbar";
-
-export default function RootLayout({ children }) {
-  return (
-    <html lang="en">
-      <body>
-        <Navbar />
-        {children}
-      </body>
-    </html>
-  );
+body{
+font-family: "Helvetica Neue", Arial, sans-serif;
+color:white;
+line-height:1.6;
+background: linear-gradient(135deg,#00e6d3,#0a2540);
+min-height:100vh;
 }
 
-
----
-
-🌌 components/Hero.tsx (Animated Civilization Hero)
-
-"use client";
-import { useEffect, useRef } from "react";
-
-export default function Hero() {
-  const canvasRef = useRef(null);
-
-  useEffect(() => {
-    const canvas = canvasRef.current;
-    const ctx = canvas.getContext("2d");
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
-
-    let particles = Array.from({ length: 120 }).map(() => ({
-      x: Math.random() * canvas.width,
-      y: Math.random() * canvas.height,
-      vx: (Math.random() - 0.5) * 0.5,
-      vy: (Math.random() - 0.5) * 0.5,
-    }));
-
-    function animate() {
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
-      particles.forEach(p => {
-        p.x += p.vx;
-        p.y += p.vy;
-        ctx.beginPath();
-        ctx.arc(p.x, p.y, 2, 0, Math.PI * 2);
-        ctx.fillStyle = "#00e6d3";
-        ctx.fill();
-      });
-      requestAnimationFrame(animate);
-    }
-
-    animate();
-  }, []);
-
-  return (
-    <section className="hero">
-      <canvas ref={canvasRef} className="bg" />
-      <div className="heroContent">
-        <h1>COESSE</h1>
-        <p>Civilization Collaboration Consensus Network</p>
-      </div>
-    </section>
-  );
+.container{
+max-width:1000px;
+margin:auto;
+padding:60px 20px;
 }
 
-
----
-
-🏠 app/page.tsx
-
-import Hero from "@/components/Hero";
-
-export default function Home() {
-  return (
-    <main>
-      <Hero />
-      <section className="section">
-        <h2>About</h2>
-        <p>
-          Coesse connects individuals into a civilization‑scale
-          consensus network to protect Earth and defend human rights.
-        </p>
-      </section>
-    </main>
-  );
+h1{
+font-size:48px;
+margin-bottom:20px;
 }
 
-
----
-
-🎨 styles/globals.css
-
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-  background: #071a1a;
-  color: white;
+h2{
+margin-top:50px;
+margin-bottom:20px;
+font-size:28px;
 }
 
-.hero {
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  overflow: hidden;
+p{
+margin-bottom:18px;
+opacity:0.95;
 }
 
-.bg {
-  position: absolute;
-  width: 100%;
-  height: 100%;
+.hero{
+text-align:center;
+padding-top:120px;
+padding-bottom:120px;
 }
 
-.heroContent {
-  position: relative;
-  text-align: center;
+.hero h1{
+font-size:60px;
+font-weight:700;
 }
 
-.heroContent h1 {
-  font-size: 70px;
-  letter-spacing: 4px;
+.subtitle{
+font-size:20px;
+opacity:0.9;
+margin-top:20px;
 }
 
-.section {
-  max-width: 900px;
-  margin: auto;
-  padding: 120px 24px;
+.section{
+margin-top:60px;
 }
 
+.footer{
+text-align:center;
+margin-top:80px;
+padding:40px 0;
+border-top:1px solid rgba(255,255,255,0.2);
+opacity:0.8;
+}
 
----
+.token-box{
+background:rgba(255,255,255,0.08);
+padding:25px;
+border-radius:12px;
+margin-top:20px;
+}
 
-✨ What This Gives You
-
-You now have:
-
-• Production‑grade Next.js portal architecture • Multi‑page routing • Animated civilization network hero • Scalable component system • Ready for Web3 integration
-
-
----
-
-🚀 Deployment (1‑Click)
-
-Push to GitHub → Connect to:
-
-• Vercel (recommended) • Cloudflare Pages
-
-Build command:
-
-npm run build
-
-
----
-
-🌍 Next Possible Upgrades
-
-1. Wallet Connect Integration
-
-
-2. DAO Governance UI
-
-
-3. Token Live Data Dashboard
-
-
-4. Multi‑language system
-
-
-5. Full Web3 Identity Layer
-
-
-
-
----
-
-© 2026 Coesse.org — Civilization Infrastructure
+@media(max-width:768px){
+.hero h1{font-size:38px}
+h1{font-size:34px}
+.container{padding:40px 18px}
+}
+</style></head><body><div class="container"><div class="hero">
+<h1>Coesse</h1>
+<p class="subtitle">
+A Civilization Collaboration Consensus Network
+</p>
+</div><div class="section">
+<h2>Why Coesse Exists</h2>
+<p>Humanity stands at an unprecedented turning point. Technology is reshaping the world at extraordinary speed, yet ecological systems are under strain, privacy is eroding, power is concentrating, and individuals are increasingly systematized.</p>
+<p>The challenge is not technology itself, but the absence of a global mechanism that enables genuine cooperation among individuals.</p>
+<p>Coesse was born to create a connective structure where individuals can form lasting consensus and coordinated action.</p>
+</div><div class="section">
+<h2>What Coesse Is</h2>
+<p>Coesse is not merely a cryptocurrency or digital asset. It is a connective bond that allows dispersed individual power to converge into collective influence.</p>
+<p>Through this network, silent consensus becomes visible and ordinary actions become sustained civilizational force.</p>
+</div><div class="section">
+<h2>Core Mission</h2>
+<p><strong>Protect Earth’s Ecology</strong><br>
+Ecological balance is the foundation of civilization.</p><p><strong>Defend Human Rights</strong><br>
+Human rights extend into both physical and digital worlds — including freedom, privacy, data ownership, and intellectual autonomy.</p>
+</div><div class="section">
+<h2>Consensus Logic</h2>
+<p>In Coesse, consensus does not arise from capital, authority, or computational power. It arises from contribution.</p>
+<p>Every meaningful action that protects ecology or advances human rights becomes part of the network’s consensus structure.</p>
+</div><div class="section">
+<h2>Token Information</h2>
+<div class="token-box">
+<p>Total Supply: 1,618,000,000 COESSE</p>
+<p>Public Pool: ~1,000,000,000</p>
+<p>Founder Allocation: ~500,000,000</p>
+<p>Chain: Base</p>
+<p>Contract: 0x7f0d4629C76923C6a541d142077503C177e720C8</p>
+</div>
+</div><div class="section">
+<h2>A Beginning</h2>
+<p>Coesse begins as a small signal — without institutional backing, without centralized control, and without privileged structure.</p>
+<p>It exists solely as an open network and the individuals who choose to participate.</p>
+<p>From ordinary beginnings, collective action can reshape the trajectory of civilization.</p>
+</div><div class="footer">
+<p>© 2026 Coesse.org</p>
+<p>Contact: oneworld@coesse.org</p>
+</div></div></body>
+</html>
