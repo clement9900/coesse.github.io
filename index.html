@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coesse | Civilization Collaboration Consensus Network</title>
+    <title>Coesse | One World, One Breath</title>
     <style>
         :root {
             --bg-dark: #1a1f24;
@@ -12,7 +12,7 @@
             --text-dim: #a0abb6;
             --accent-cyan: #00bccd;
             --accent-gradient: linear-gradient(90deg, #00bccd, #007474);
-            --border-glow: rgba(0, 188, 205, 0.2);
+            --border-glow: rgba(0, 188, 205, 0.1);
         }
 
         * {
@@ -25,210 +25,158 @@
             background-color: var(--bg-dark);
             color: var(--text-main);
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            line-height: 1.6;
+            line-height: 1.8;
             -webkit-font-smoothing: antialiased;
         }
 
         .container {
-            max-width: 1100px;
+            max-width: 1000px;
             margin: 0 auto;
             padding: 0 24px;
         }
 
         /* Navigation */
         nav {
-            height: 90px;
+            height: 100px;
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
 
-        .logo-text {
-            font-size: 24px;
-            font-weight: 700;
-            letter-spacing: 1px;
+        .logo {
+            font-size: 26px;
+            font-weight: 800;
+            letter-spacing: 2px;
             color: var(--text-main);
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 32px;
-        }
-
-        .nav-links a {
-            color: var(--text-dim);
-            text-decoration: none;
-            font-size: 14px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            transition: color 0.3s;
-        }
-
-        .nav-links a:hover {
-            color: var(--accent-cyan);
         }
 
         /* Hero Section */
         .hero {
-            padding: 120px 0 80px;
-            text-align: left;
+            padding: 100px 0 60px;
+        }
+
+        .tagline {
+            color: var(--accent-cyan);
+            font-weight: 600;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            display: block;
         }
 
         h1 {
-            font-size: clamp(36px, 8vw, 64px);
+            font-size: clamp(32px, 7vw, 60px);
             font-weight: 800;
-            margin-bottom: 24px;
             line-height: 1.1;
-            letter-spacing: -1px;
+            margin-bottom: 30px;
         }
 
-        .hero p {
-            font-size: clamp(18px, 3vw, 22px);
+        .manifesto-lead {
+            font-size: clamp(18px, 2.5vw, 22px);
             color: var(--text-dim);
-            max-width: 800px;
-            margin-bottom: 48px;
+            max-width: 850px;
+            margin-bottom: 40px;
             font-weight: 300;
+        }
+
+        /* Philosophy Section */
+        .philosophy {
+            background: rgba(255, 255, 255, 0.02);
+            padding: 60px;
+            border-left: 2px solid var(--accent-cyan);
+            margin: 80px 0;
+        }
+
+        .philosophy h2 {
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        .etymology {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-top: 30px;
+        }
+
+        .etym-box h4 {
+            color: var(--accent-cyan);
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        /* Rights Section */
+        .mission-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 60px 0;
+        }
+
+        .mission-card {
+            background: var(--card-bg);
+            padding: 40px;
+            border-radius: 4px;
+            border: 1px solid var(--border-glow);
+        }
+
+        .mission-card h3 {
+            margin-bottom: 15px;
+            font-size: 22px;
+        }
+
+        .rights-list {
+            list-style: none;
+            margin-top: 20px;
+        }
+
+        .rights-list li {
+            padding: 12px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+            color: var(--text-dim);
+            font-size: 15px;
+        }
+
+        .rights-list li b {
+            color: var(--accent-cyan);
+        }
+
+        /* Call to Action */
+        .cta-section {
+            text-align: center;
+            padding: 100px 0;
         }
 
         .cta-btn {
             display: inline-block;
             background: var(--accent-gradient);
             color: white;
-            padding: 16px 40px;
-            border-radius: 4px;
+            padding: 18px 48px;
+            border-radius: 2px;
             text-decoration: none;
-            font-weight: 600;
-            font-size: 16px;
+            font-weight: 700;
             letter-spacing: 1px;
-            transition: transform 0.2s, box-shadow 0.2s;
+            transition: all 0.3s;
         }
 
         .cta-btn:hover {
+            box-shadow: 0 0 30px rgba(0, 188, 205, 0.4);
             transform: translateY(-2px);
-            box-shadow: 0 10px 20px rgba(0, 188, 205, 0.3);
-        }
-
-        /* Features Section */
-        .section-header {
-            margin: 80px 0 40px;
-        }
-
-        .section-header h2 {
-            font-size: 32px;
-            margin-bottom: 8px;
-        }
-
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 30px;
-            margin-bottom: 100px;
-        }
-
-        .card {
-            background-color: var(--card-bg);
-            padding: 40px;
-            border-radius: 8px;
-            border: 1px solid rgba(255,255,255,0.05);
-            transition: all 0.3s ease;
-        }
-
-        .card:hover {
-            border-color: var(--accent-cyan);
-            background-color: #262e36;
-        }
-
-        .card h3 {
-            font-size: 22px;
-            margin-bottom: 20px;
-            color: var(--accent-cyan);
-        }
-
-        .card p {
-            color: var(--text-dim);
-            font-size: 16px;
-            line-height: 1.7;
-        }
-
-        /* Rights Declaration */
-        .rights-container {
-            background: rgba(0, 188, 205, 0.03);
-            border: 1px solid var(--border-glow);
-            padding: 60px;
-            border-radius: 12px;
-            margin-bottom: 120px;
-        }
-
-        .rights-item {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 24px 0;
-            border-bottom: 1px solid rgba(255,255,255,0.05);
-        }
-
-        .rights-item:last-child {
-            border-bottom: none;
-        }
-
-        .rights-title {
-            font-size: 18px;
-            font-weight: 500;
-        }
-
-        .rights-tag {
-            font-size: 12px;
-            padding: 4px 12px;
-            border: 1px solid var(--accent-cyan);
-            color: var(--accent-cyan);
-            border-radius: 20px;
-            text-transform: uppercase;
-        }
-
-        /* Quote Section */
-        .manifesto-quote {
-            text-align: center;
-            max-width: 800px;
-            margin: 0 auto 120px;
-        }
-
-        .manifesto-quote blockquote {
-            font-size: 24px;
-            font-style: italic;
-            color: var(--text-main);
-            margin-bottom: 20px;
         }
 
         /* Footer */
         footer {
-            padding: 80px 0 40px;
+            padding: 60px 0;
             border-top: 1px solid rgba(255,255,255,0.05);
             text-align: center;
-        }
-
-        .footer-info {
-            color: var(--text-dim);
             font-size: 14px;
-            margin-bottom: 10px;
+            color: var(--text-dim);
         }
 
-        .contact-link {
-            color: var(--accent-cyan);
-            text-decoration: none;
-            opacity: 0.8;
-            transition: opacity 0.2s;
-        }
-
-        .contact-link:hover {
-            opacity: 1;
-        }
-
-        /* Mobile Adjustments */
         @media (max-width: 768px) {
-            nav .nav-links { display: none; }
-            .hero { padding: 80px 0 40px; }
-            .rights-container { padding: 30px; }
-            .rights-item { flex-direction: column; align-items: flex-start; gap: 10px; }
+            .etymology { grid-template-columns: 1fr; }
+            .philosophy { padding: 30px; }
+            h1 { font-size: 36px; }
         }
     </style>
 </head>
@@ -236,80 +184,65 @@
 
     <div class="container">
         <nav>
-            <div class="logo-text">COESSE</div>
-            <div class="nav-links">
-                <a href="#mission">Mission</a>
-                <a href="#rights">Rights</a>
-                <a href="#action">Action</a>
-            </div>
+            <div class="logo">COESSE</div>
         </nav>
 
         <section class="hero">
-            <h1>Connecting Individuals.<br>Restoring Civilization.</h1>
-            <p>
-                Coesse is a civilization collaboration consensus network. We believe that when countless individuals connect and act, the world regains the power to shift its own direction.
+            <span class="tagline">One World, One Breath</span>
+            <h1>Connectivity is Existence.</h1>
+            <p class="manifesto-lead">
+                Great eras are never manufactured. They are born the moment ordinary individuals connect with one another. 
+                Coesse exists to be the bond—letting scattered power converge and silent consensus emerge.
             </p>
-            <a href="mailto:oneworld@coesse.org" class="cta-btn">JOIN THE NETWORK</a>
         </section>
 
-        <section id="mission">
-            <div class="section-header">
-                <h2>Why Coesse Exists</h2>
-            </div>
-            <div class="grid">
-                <div class="card">
-                    <h3>🌱 Planetary Ecology</h3>
-                    <p>Ecology is the prerequisite for civilization. Coesse connects individual actions to drive long-term, decentralized ecological collaboration.</p>
+        <section class="philosophy">
+            <h2>The Philosophy of Naming</h2>
+            <p>Coesse is derived from Latin roots, representing a profound ontological structure for the decentralized age.</p>
+            <div class="etymology">
+                <div class="etym-box">
+                    <h4>Co — Connect</h4>
+                    <p>From <i>cum</i> (with/together). It symbolizes collaboration, consensus, and the network that replaces central authority.</p>
                 </div>
-                <div class="card">
-                    <h3>⚖️ Human Rights</h3>
-                    <p>Dignity and freedom are sacred in both the physical and digital realms. Technology must serve humanity, not dominate it.</p>
-                </div>
-                <div class="card">
-                    <h3>⚡ Contribution Consensus</h3>
-                    <p>Order comes from spontaneous consensus among individuals. Every real action is recorded, confirmed, and transformed into collective power.</p>
+                <div class="etym-box">
+                    <h4>Esse — To Be</h4>
+                    <p>The core of essence and existence. It signifies that being is not isolated, but inherently relational.</p>
                 </div>
             </div>
+            <p style="margin-top: 30px; font-style: italic; color: var(--accent-cyan);">
+                "To exist is to be connected."
+            </p>
         </section>
 
-        <section id="rights">
-            <div class="section-header">
-                <h2>The Universal Declaration</h2>
+        <section class="mission-grid">
+            <div class="mission-card">
+                <h3>🌍 Guard the Earth</h3>
+                <p>Ecology is the prerequisite for civilization. We connect individual actions to ensure the natural foundation of our shared existence remains sustainable.</p>
             </div>
-            <div class="rights-container">
-                <div class="rights-item">
-                    <div class="rights-title">Fundamental Rights to Survival & Liberty</div>
-                    <div class="rights-tag">Traditional Rights</div>
-                </div>
-                <div class="rights-item">
-                    <div class="rights-title">Right to Privacy and Inviolability</div>
-                    <div class="rights-tag">Digital Sovereignty</div>
-                </div>
-                <div class="rights-item">
-                    <div class="rights-title">Freedom of Thought from Algorithmic Shaping</div>
-                    <div class="rights-tag">Cognitive Liberty</div>
-                </div>
-                <div class="rights-item">
-                    <div class="rights-title">Protection Against Data Predation</div>
-                    <div class="rights-tag">Digital Assets</div>
-                </div>
-                <div class="rights-item">
-                    <div class="rights-title">The Right to Free Flow of Information</div>
-                    <div class="rights-tag">Universal Value</div>
-                </div>
+            <div class="mission-card">
+                <h3>⚖️ Defend Human Rights</h3>
+                <p>Dignity is the meaning of existence. We fight for rights that span both the physical and digital realms.</p>
+                <ul class="rights-list">
+                    <li><b>Privacy</b> should not be peered into.</li>
+                    <li><b>Data</b> should not be predated.</li>
+                    <li><b>Thought</b> should not be shaped by algorithms.</li>
+                    <li><b>Freedom</b> should not be defined by systems.</li>
+                </ul>
             </div>
         </section>
 
-        <section class="manifesto-quote">
-            <blockquote>"Great changes often begin with tiny connections."</blockquote>
-            <p style="color: var(--accent-cyan);">The era of the stars will eventually arrive.</p>
+        <section class="cta-section">
+            <p style="margin-bottom: 30px; font-size: 18px; color: var(--text-dim);">
+                When consensus transcends authority, the era of the stars arrives.
+            </p>
+            <a href="mailto:oneworld@coesse.org" class="cta-btn">ACTIVATE CONNECTION</a>
         </section>
 
         <footer>
-            <div class="footer-info">© 2026 Coesse. Civilization Collaboration Consensus Network.</div>
-            <div class="footer-info" style="margin-top: 20px;">
-                <a href="mailto:oneworld@coesse.org" class="contact-link">oneworld@coesse.org</a>
-            </div>
+            <p>© 2026 COESSE. A Civilization Collaboration Consensus Network.</p>
+            <p style="margin-top: 15px;">
+                <a href="mailto:oneworld@coesse.org" style="color: var(--accent-cyan); text-decoration: none;">oneworld@coesse.org</a>
+            </p>
         </footer>
     </div>
 
