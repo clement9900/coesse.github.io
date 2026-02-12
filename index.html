@@ -1,96 +1,89 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Coesse — One World. One Breath.</title>
-  <link rel="stylesheet" href="style.css" />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Coesse — Civilizational Consensus Network</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+<style>
+body{margin:0;font-family:Inter,system-ui;background:#020c0c;color:#eaffff;overflow-x:hidden}
+canvas{position:fixed;top:0;left:0;z-index:-1}
+section{padding:120px 20px;max-width:1100px;margin:auto}
+.hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center}
+h1{font-size:80px;margin:0}
+h2{font-size:44px;margin-bottom:20px}
+p{line-height:1.8;font-size:19px}
+.card{background:rgba(255,255,255,0.05);padding:45px;border-radius:22px;margin:45px 0;backdrop-filter:blur(12px)}
+.nav{position:fixed;top:0;width:100%;background:rgba(0,0,0,.35);padding:16px;text-align:center;backdrop-filter:blur(12px);z-index:10}
+.nav a{margin:0 22px;color:#cfffff;text-decoration:none;font-weight:600}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+.footer{text-align:center;padding:70px 20px;opacity:.7}
+.small{font-size:14px;opacity:.6;margin-top:20px}
+</style>
 </head>
+<body><canvas id="bg"></canvas>
 
-<body>
-  <main class="page">
+<div class="nav">
+<a href="#vision">Vision</a>
+<a href="#principles">Principles</a>
+<a href="#token">Token</a>
+<a href="#legal">Legal</a>
+</div><section class="hero">
+<h1>Coesse</h1>
+<p style="font-size:30px">One World · One Breath</p>
+<p>A Civilizational Consensus Network Connecting Individuals Worldwide</p>
+</section><section id="vision">
+<h2>Why Coesse Exists</h2>
+<div class="card">
+<p>
+Coesse emerges at a pivotal civilizational moment — where technological power expands rapidly while ecological balance and human dignity face unprecedented systemic risks.Its purpose is to reconnect individuals globally and provide a long‑term coordination signal for planetary and human rights alignment.
 
-    <!-- HERO -->
-    <section class="card hero">
-      <h1>Coesse</h1>
-      <p class="tagline">One World. One Breath.</p>
-      <p class="intro">
-        Coesse is a global initiative proposed by volunteers,
-        rooted in a shared concern for life,
-        human dignity, and the future of the planet.
-      </p>
-    </section>
+</p>
+</div>
+</section><section id="principles">
+<h2>Core Principles</h2>
+<div class="grid">
+<div class="card">
+<h3>Protect Earth's Ecology</h3>
+<p>Ecological stability is the foundational layer of civilization survival.</p>
+</div>
+<div class="card">
+<h3>Defend Human Rights</h3>
+<p>Includes both traditional freedoms and digital‑era rights such as privacy sovereignty and data autonomy.</p>
+</div>
+</div>
+</section><section id="token">
+<h2>Token Overview</h2>
+<div class="card">
+<p>
+Total Supply: 1,618,000,000 COESSE<br><br>
+Public Pool: ~1,000,000,000<br>
+Founder Allocation: ~500,000,000<br><br>
+Base Network<br>
+0x7f0d4629C76923C6a541d142077503C177e720C8
+</p>
+</div>
+</section><section id="legal">
+<h2>Legal Disclaimer</h2>
+<div class="card">
+<p>
+Coesse is a decentralized civilizational coordination experiment and does not represent financial securities, investment contracts, or ownership rights in any entity.Participation in blockchain networks carries inherent risks, including market volatility, technological uncertainty, and regulatory changes.
 
-    <!-- MISSION -->
-    <section class="card">
-      <h2>Mission</h2>
-      <p>
-        To encourage reflection on the dignity of life and humanity’s
-        responsibility toward the Earth — not through authority,
-        but through individual awareness.
-      </p>
-    </section>
+Nothing on this website constitutes financial, legal, or investment advice.
 
-    <!-- VISION -->
-    <section class="card">
-      <h2>Vision</h2>
-      <p>
-        A world where human dignity is respected,
-        the Earth is treated as a living system,
-        and responsibility begins with each individual.
-      </p>
-    </section>
+Users participate voluntarily and assume full responsibility for their decisions.
 
-    <!-- VALUES -->
-    <section class="grid">
-      <div class="card">
-        <h3>Life Is Interconnected</h3>
-        <p>
-          The Earth is not merely a resource,
-          but a shared system of life.
-        </p>
-      </div>
-
-      <div class="card">
-        <h3>Human Dignity</h3>
-        <p>
-          Dignity is inherent and unconditional,
-          independent of power or identity.
-        </p>
-      </div>
-
-      <div class="card">
-        <h3>Individual Responsibility</h3>
-        <p>
-          Meaningful change begins quietly,
-          with personal awareness.
-        </p>
-      </div>
-
-      <div class="card">
-        <h3>Reflection Before Action</h3>
-        <p>
-          Without reflection, action loses direction.
-        </p>
-      </div>
-    </section>
-
-    <!-- DISCLAIMER -->
-    <section class="card subtle">
-      <p>
-        Coesse is not affiliated with any institution,
-        government, or political organization.
-      </p>
-      <p>
-        It claims no authority, leadership, or representation.
-      </p>
-    </section>
-
-    <!-- FOOTER -->
-    <footer class="footer">
-      <p>© Coesse.org</p>
-    </footer>
-
-  </main>
-</body>
+</p>
+</div>
+</section><div class="footer">
+<p>Contact: oneworld@coesse.org</p>
+<p class="small">© 2026 Coesse.org — All Rights Reserved</p>
+</div><script>
+const canvas=document.getElementById('bg');
+const ctx=canvas.getContext('2d');
+canvas.width=window.innerWidth;
+canvas.height=window.innerHeight;
+let particles=[];
+for(let i=0;i<120;i++)particles.push({x:Math.random()*canvas.width,y:Math.random()*canvas.height,vx:(Math.random()-0.5)*0.5,vy:(Math.random()-0.5)*0.5});
+function draw(){ctx.clearRect(0,0,canvas.width,canvas.height);ctx.fillStyle="#00ffd5";particles.forEach(p=>{p.x+=p.vx;p.y+=p.vy;if(p.x<0||p.x>canvas.width)p.vx*=-1;if(p.y<0||p.y>canvas.height)p.vy*=-1;ctx.beginPath();ctx.arc(p.x,p.y,1.2,0,Math.PI*2);ctx.fill();});requestAnimationFrame(draw);}draw();
+</script></body>
 </html>
