@@ -6,243 +6,229 @@
     <title>Coesse | One World, One Breath</title>
     <style>
         :root {
-            --bg-dark: #1a1f24;
-            --card-bg: #21282f;
-            --text-main: #ffffff;
-            --text-dim: #a0abb6;
-            --accent-cyan: #00bccd;
-            --accent-gradient: linear-gradient(90deg, #00bccd, #007474);
-            --border-glow: rgba(0, 188, 205, 0.1);
+            --bg: #161a1e;
+            --text: #ffffff;
+            --dim: #a0abb6;
+            --cyan: #00bccd;
+            --dark-cyan: #007474;
+            --glow: rgba(0, 188, 205, 0.15);
         }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
 
         body {
-            background-color: var(--bg-dark);
-            color: var(--text-main);
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            font-family: 'Inter', -apple-system, sans-serif;
             line-height: 1.8;
+            letter-spacing: 0.01em;
             -webkit-font-smoothing: antialiased;
         }
 
-        .container {
-            max-width: 1000px;
+        .manifesto-container {
+            max-width: 800px;
             margin: 0 auto;
-            padding: 0 24px;
+            padding: 120px 24px;
         }
 
-        /* Navigation */
-        nav {
-            height: 100px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+        /* Top Identity */
+        header {
+            text-align: center;
+            margin-bottom: 100px;
         }
 
-        .logo {
-            font-size: 26px;
+        .motto {
+            color: var(--cyan);
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 6px;
+            display: block;
+            margin-bottom: 20px;
+        }
+
+        .logo-title {
+            font-size: 48px;
             font-weight: 800;
             letter-spacing: 2px;
-            color: var(--text-main);
         }
 
-        /* Hero Section */
-        .hero {
-            padding: 100px 0 60px;
-        }
+        /* Content Blocks */
+        section { margin-bottom: 120px; }
 
-        .tagline {
-            color: var(--accent-cyan);
-            font-weight: 600;
-            letter-spacing: 3px;
-            text-transform: uppercase;
-            margin-bottom: 20px;
-            display: block;
-        }
-
-        h1 {
-            font-size: clamp(32px, 7vw, 60px);
-            font-weight: 800;
-            line-height: 1.1;
+        h2 {
+            font-size: 24px;
+            color: var(--cyan);
             margin-bottom: 30px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            border-bottom: 1px solid var(--glow);
+            padding-bottom: 10px;
+            display: inline-block;
         }
 
-        .manifesto-lead {
-            font-size: clamp(18px, 2.5vw, 22px);
-            color: var(--text-dim);
-            max-width: 850px;
-            margin-bottom: 40px;
+        p {
+            font-size: 19px;
+            color: var(--dim);
+            margin-bottom: 28px;
             font-weight: 300;
         }
 
-        /* Philosophy Section */
-        .philosophy {
+        .emphasis {
+            color: var(--text);
+            font-weight: 500;
+        }
+
+        /* Naming Philosophy Box */
+        .philosophy-card {
             background: rgba(255, 255, 255, 0.02);
-            padding: 60px;
-            border-left: 2px solid var(--accent-cyan);
-            margin: 80px 0;
+            border: 1px solid var(--glow);
+            padding: 40px;
+            margin: 40px 0;
+            border-radius: 4px;
         }
 
-        .philosophy h2 {
-            font-size: 28px;
-            margin-bottom: 20px;
-        }
-
-        .etymology {
+        .etymology-row {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 40px;
+            grid-template-columns: 120px 1fr;
+            margin-bottom: 30px;
+            align-items: baseline;
+        }
+
+        .etymology-row h4 {
+            color: var(--cyan);
+            font-size: 22px;
+            font-weight: 700;
+        }
+
+        .etymology-row p {
+            font-size: 16px;
+            margin-bottom: 0;
+        }
+
+        /* Rights Declaration */
+        .rights-list {
             margin-top: 30px;
         }
 
-        .etym-box h4 {
-            color: var(--accent-cyan);
-            font-size: 20px;
-            margin-bottom: 10px;
-        }
-
-        /* Rights Section */
-        .mission-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin: 60px 0;
-        }
-
-        .mission-card {
-            background: var(--card-bg);
-            padding: 40px;
-            border-radius: 4px;
-            border: 1px solid var(--border-glow);
-        }
-
-        .mission-card h3 {
-            margin-bottom: 15px;
-            font-size: 22px;
-        }
-
-        .rights-list {
-            list-style: none;
-            margin-top: 20px;
-        }
-
-        .rights-list li {
-            padding: 12px 0;
+        .right-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 18px 0;
             border-bottom: 1px solid rgba(255,255,255,0.05);
-            color: var(--text-dim);
-            font-size: 15px;
+            font-size: 17px;
         }
 
-        .rights-list li b {
-            color: var(--accent-cyan);
-        }
+        .right-item span { color: var(--cyan); font-weight: 600; font-size: 13px; letter-spacing: 1px;}
 
-        /* Call to Action */
-        .cta-section {
+        /* Quote / Closing */
+        .closing {
             text-align: center;
-            padding: 100px 0;
+            margin-top: 150px;
         }
 
-        .cta-btn {
-            display: inline-block;
-            background: var(--accent-gradient);
-            color: white;
-            padding: 18px 48px;
-            border-radius: 2px;
+        .closing blockquote {
+            font-size: 26px;
+            font-style: italic;
+            margin-bottom: 40px;
+            line-height: 1.4;
+        }
+
+        footer {
+            text-align: center;
+            padding: 60px 0;
+            border-top: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .contact-btn {
+            color: var(--cyan);
             text-decoration: none;
-            font-weight: 700;
-            letter-spacing: 1px;
+            font-size: 16px;
+            border: 1px solid var(--cyan);
+            padding: 10px 25px;
             transition: all 0.3s;
         }
 
-        .cta-btn:hover {
-            box-shadow: 0 0 30px rgba(0, 188, 205, 0.4);
-            transform: translateY(-2px);
+        .contact-btn:hover {
+            background: var(--cyan);
+            color: var(--bg);
         }
 
-        /* Footer */
-        footer {
-            padding: 60px 0;
-            border-top: 1px solid rgba(255,255,255,0.05);
-            text-align: center;
-            font-size: 14px;
-            color: var(--text-dim);
-        }
-
-        @media (max-width: 768px) {
-            .etymology { grid-template-columns: 1fr; }
-            .philosophy { padding: 30px; }
-            h1 { font-size: 36px; }
+        @media (max-width: 600px) {
+            .etymology-row { grid-template-columns: 1fr; gap: 10px; }
+            .logo-title { font-size: 32px; }
+            .manifesto-container { padding: 60px 20px; }
+            .right-item { flex-direction: column; gap: 5px; }
         }
     </style>
 </head>
 <body>
 
-    <div class="container">
-        <nav>
-            <div class="logo">COESSE</div>
-        </nav>
+    <div class="manifesto-container">
+        <header>
+            <span class="motto">One World, One Breath</span>
+            <div class="logo-title">COESSE</div>
+        </header>
 
-        <section class="hero">
-            <span class="tagline">One World, One Breath</span>
-            <h1>Connectivity is Existence.</h1>
-            <p class="manifesto-lead">
-                Great eras are never manufactured. They are born the moment ordinary individuals connect with one another. 
-                Coesse exists to be the bond—letting scattered power converge and silent consensus emerge.
-            </p>
+        <section>
+            <p>Every leap in history, every rebirth of civilization, stems from countless individuals—seemingly tiny, yet connected. When they awaken, resonate, and act, the direction of the world shifts.</p>
+            <p class="emphasis">Great eras are never manufactured; they are born naturally at the moment ordinary individuals connect.</p>
+            <p>Coesse is born from this realization. Its existence is to become the bond—letting scattered power converge, and silent consensus emerge.</p>
         </section>
 
-        <section class="philosophy">
-            <h2>The Philosophy of Naming</h2>
-            <p>Coesse is derived from Latin roots, representing a profound ontological structure for the decentralized age.</p>
-            <div class="etymology">
-                <div class="etym-box">
-                    <h4>Co — Connect</h4>
-                    <p>From <i>cum</i> (with/together). It symbolizes collaboration, consensus, and the network that replaces central authority.</p>
+        <section>
+            <h2>Naming Philosophy</h2>
+            <div class="philosophy-card">
+                <div class="etymology-row">
+                    <h4>Co —</h4>
+                    <p><span class="emphasis">Connect / Together.</span> From Latin <i>cum</i>. Symbolizing collaboration and networks that replace central authority.</p>
                 </div>
-                <div class="etym-box">
-                    <h4>Esse — To Be</h4>
-                    <p>The core of essence and existence. It signifies that being is not isolated, but inherently relational.</p>
+                <div class="etymology-row">
+                    <h4>Esse —</h4>
+                    <p><span class="emphasis">To Exist.</span> The core of essence. It signifies life and the nature of being itself.</p>
+                </div>
+                <p style="text-align: center; margin-top: 20px; font-style: italic; color: var(--text);">
+                    "To exist is not to be isolated, but to be in connection."
+                </p>
+            </div>
+        </section>
+
+        <section>
+            <h2>The Mission</h2>
+            <p>Technology must serve humanity, not dominate it. We face a crossroads: will the digital world amplify freedom, or swallow human agency? Coesse exists to fulfill the fundamental mission of our time:</p>
+            
+            <div style="margin-top: 40px;">
+                <p class="emphasis" style="color: var(--cyan);">🌱 Guard the Earth</p>
+                <p>Because ecology is the prerequisite for civilization. Without a sustainable natural system, the foundation of humanity collapses.</p>
+            </div>
+
+            <div style="margin-top: 40px;">
+                <p class="emphasis" style="color: var(--cyan);">⚖️ Defend Human Rights</p>
+                <p>Because dignity is the meaning of existence. Rights must be protected in both the physical and digital realms:</p>
+                
+                <div class="rights-list">
+                    <div class="right-item">Privacy should not be peered into <span>DIGITAL SOVEREIGNTY</span></div>
+                    <div class="right-item">Data should not be predated <span>DATA RIGHTS</span></div>
+                    <div class="right-item">Thought should not be shaped by algorithms <span>COGNITIVE LIBERTY</span></div>
+                    <div class="right-item">Freedom should not be defined by systems <span>UNIVERSAL LIBERTY</span></div>
                 </div>
             </div>
-            <p style="margin-top: 30px; font-style: italic; color: var(--accent-cyan);">
-                "To exist is to be connected."
-            </p>
         </section>
 
-        <section class="mission-grid">
-            <div class="mission-card">
-                <h3>🌍 Guard the Earth</h3>
-                <p>Ecology is the prerequisite for civilization. We connect individual actions to ensure the natural foundation of our shared existence remains sustainable.</p>
-            </div>
-            <div class="mission-card">
-                <h3>⚖️ Defend Human Rights</h3>
-                <p>Dignity is the meaning of existence. We fight for rights that span both the physical and digital realms.</p>
-                <ul class="rights-list">
-                    <li><b>Privacy</b> should not be peered into.</li>
-                    <li><b>Data</b> should not be predated.</li>
-                    <li><b>Thought</b> should not be shaped by algorithms.</li>
-                    <li><b>Freedom</b> should not be defined by systems.</li>
-                </ul>
-            </div>
+        <section>
+            <p>Decentralization does not mean chaos. It means that <span class="emphasis">responsibility returns to the individual.</span> Order no longer stems from power centers, but from consensus.</p>
+            <p>Coesse is not just a token. It is a signal, a choice, and a long-term action initiated by ordinary people.</p>
         </section>
 
-        <section class="cta-section">
-            <p style="margin-bottom: 30px; font-size: 18px; color: var(--text-dim);">
-                When consensus transcends authority, the era of the stars arrives.
-            </p>
-            <a href="mailto:oneworld@coesse.org" class="cta-btn">ACTIVATE CONNECTION</a>
-        </section>
+        <div class="closing">
+            <blockquote>"When consensus transcends authority, the era of the stars shall arrive."</blockquote>
+            <p>At that moment, humanity will truly decide its own future as a whole.</p>
+        </div>
 
         <footer>
-            <p>© 2026 COESSE. A Civilization Collaboration Consensus Network.</p>
-            <p style="margin-top: 15px;">
-                <a href="mailto:oneworld@coesse.org" style="color: var(--accent-cyan); text-decoration: none;">oneworld@coesse.org</a>
-            </p>
+            <div style="margin-bottom: 30px;">
+                <a href="mailto:oneworld@coesse.org" class="contact-btn">oneworld@coesse.org</a>
+            </div>
+            <p style="font-size: 12px; color: #555;">© 2026 COESSE. A Civilization Collaboration Consensus Network.</p>
         </footer>
     </div>
 
